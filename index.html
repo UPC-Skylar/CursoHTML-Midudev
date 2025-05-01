@@ -35,6 +35,35 @@
                 <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
             </nav>
         </header>
+
+        <video autoplay loop muted src="./assets/video/video.mp4" controls></video>
+
+        <audio controls src="./assets/audio/got-it.mp3"></audio>
+
+        <img style="width:50%; aspect-ratio:16/9;"  src="./assets/img/programmer.jpg" alt="Foto de un programador">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zg8jNvGGE_Q?si=QnNhAA1OYiaQhbLt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <dialog id="dialog">
+            <h1>¿Sabías que puedes abrir una modal así?</h1>
+            <p>¡Y es totalmente nativo!</p>
+            <button id="hide">Cerrar modal</button>
+        </dialog>
+
+        <button id="show">Ver mas información</button>
+
+        <!-- Cada vez que tenemos un elemento con identificador,
+         se crea una propiedad en el window que puedes acceder directamente desde ese elemento -->
+        <script>
+            window.show.addEventListener('click', () => {
+                window.dialog.showModal();
+            })
+
+            window.hide.addEventListener('click', () => {
+                window.dialog.close();
+            })
+        </script>
+
         <!-- Main solo puede haber uno, contenido principal de nuestra pagina web -->
         <main>
 
@@ -167,9 +196,9 @@
                     </div>
     
                 </fieldset>
-    
-                <input type="submit" value="Enviar contacto">
-    
+                
+                <!-- Los botones dentro de un formulario son de tipo submit por defecto, se podria obviar el atributo type -->
+                <button type="submit">Enviar contacto</button>
             </form>
         </section>
     
